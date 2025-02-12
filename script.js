@@ -16,7 +16,7 @@ const updateImg = () => {
     currentImg = imgsEl.length;
   }
 
-  imgContainerEl.style.transform = `translateX(-${(currentImg - 1) * 500}px)`;
+  imgContainerEl.style.transform = `translateX(-${(currentImg - 1) * 900}px)`;
 
   statusIcons.forEach((icon, index) => {
     icon.classList.toggle("active", index === currentImg - 1);
