@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+  box-shadow: 0 0.1rem 1.6rem rgba(0, 0, 0, 0.3);
+}
+.image-slider {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  -webkit-transition: transform 0.4s ease-in-out;
+  -moz-transition: transform 0.4s ease-in-out;
+  -ms-transition: transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
+}
+.icon {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: white;
+  opacity: 0.5;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.icon:hover {
+  opacity: 1;
+}
+.bx-chevrons-left {
+  left: 1rem;
+}
+.bx-chevrons-right {
+  right: 1rem;
+}
+.status-icons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+.status-icon {
+  width: 20px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.status-icon.active {
+  background-color: white;
+}
+@media (width <= 545px) {
+  html {
+    font-size: 42%;
+  }
+  .icon {
+    display: none;
+  }
+}
